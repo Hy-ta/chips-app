@@ -75,3 +75,6 @@ gem 'dotenv-rails'
 gem 'pry-rails'
 gem 'hirb'
 gem 'awesome_print'
+# layouts bootstrap
+gem 'bootstrap'
+gem 'jquery-rails'
