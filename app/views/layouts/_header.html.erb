@@ -1,36 +1,24 @@
-       <!--------------  heder begin -------------->
-        <header class="py-4 bg-light" id="top">
-            <div class="container text-center">
-                <h1><%= image_tag "logo.png", alt:"logo", class:"img-fluid" %></h1>
-            </div>
-        </header>
-        <!--------------  heder end ---------------->
-
         <!--------------  nav begin --------------> 
-        <nav class="navbar navbar-expand-md navbar-dark bg-dark sticky-top">
+          <nav class="navbar navbar-expand-md navbar-dark bg-dark sticky-top">
             <div class="container">
-              <a class="navbar-brand" href="top.html">Tips</a>
+              <a href="/" class="nav-link text-white">
+                <%= image_tag "logo.png", class:"d-inline w-25", alt:"", style:"height: 40px;" %>
+                </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
                  <span class="navbar-toggler-icon"></span> </button>
 
-            <div class="collapse navbar-collapse" id="navbar-content">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#top">Top<span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#about">About</a>
-                    </li>
-                     
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="top.html" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Login</a>
-                      <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="signup.html">Signup</a>
-                     </div> 
-                    </li>
-                </ul>
-             </div>
-          </div>
-        </nav>
-        <!--------------  nav end   ---------------->
-    
+                <div class="collapse navbar-collapse justify-content-end" id="navbar-content">
+                    <ul class="navbar-nav mr-auto justify-content-end">
+                        <li class="nav-item">
+                            <a class="nav-link text-secondary" href="#about">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <%= link_to "Sign up", new_user_registration_path, class:"nav-link text-secondary" %>
+                        </li>
+                        <li class="nav-item">
+                            <%= link_to "Login", new_user_session_path, class:"nav-link text-secondary" %>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+          </nav>    

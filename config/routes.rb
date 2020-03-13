@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  get 'events/index'
+  get 'events/new'
+  get 'events/show'
+  get 'events/edit'
+  get 'events/delete'
   root to: "pages#index"
  
   devise_for :users, controllers: {
