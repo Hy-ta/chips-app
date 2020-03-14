@@ -1,2 +1,64 @@
-<h1>Users#show</h1>
-<p>Find me in app/views/users/show.html.erb</p>
+<div class="py-4">
+<div class="container">
+<div id="main_visual" class="carousel slide carousel-fade" data-ride="carousel">
+    <ol class="carousel-indicators">
+        <li data-target="#main_visual" data-slide-to="0" class="active"></li>
+        <li data-target="#main_visual" data-slide-to="1"></li>
+        <li data-target="#main_visual" data-slide-to="2"></li>
+    </ol>
+<div class="carousel-inner">
+  <div class="carousel-item active">
+      <img class="img-fluid" alt="First page" src="./image/wine1.jpeg">
+      <div class="carousel-caption d-none d-md-block">
+          <h5>Our work</h5>
+          <p>Fresh wine</p>
+      </div>
+  </div>
+  <div class="carousel-item ">
+      <img class="img-fluid" alt="First page" src="./image/wine2.jpg">
+      <div class="carousel-caption d-none d-md-block">
+          <h5>Our work</h5>
+          <p>Fresh wine</p>
+      </div>
+  </div>
+  <div class="carousel-item ">
+      <img class="img-fluid" alt="First page" src="./image/wine3.jpeg">
+      <div class="carousel-caption d-none d-md-block">
+          <h5>Our work</h5>
+          <p>Fresh wine</p>
+      </div>
+  </div>
+</div>
+</div>
+<a class="carousel-control-prev" href="#main_visual" role="button" data-slide="prev">
+<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+<span class="sr-only">Prev</span>
+</a>
+<a class="carousel-control-next" href="#main_visual" role="button" data-slide="next">
+<span class="carousel-control-next-icon" aria-hidden="true"></span></a>
+<span class="sr-only">Next</span>
+</div>
+</div>
+</div>
+<!-- / main visual -->
+<!-- content 02 -->
+<div class="py-4">
+<section id="about">
+ <div class="container">
+     <div class="row mb-4">
+         <div class="col-md-8 mb-3">
+             <h3 class="mb-3 font-weight-bold">My Work</h3>
+             <p>I confess now that I intend to lift Number 16’s idea of passionfruit bread and butter pudding for home consumption. The zingy, assertive fruit electrifies this confection’s dutifully wobbly, eggy depths. A cooling mango ice cream, which tastes as though it’s made with Indian Alphonso mango pulp, and a little pool of thick egg custard that delivers a further refreshing whack of passionfruit, layers brilliance upon excellence. Another dessert, dubbed “Turkish Delight” is too much for me. Soft nougat riven with toasted pistachio, cubes of baby-pink, floaty rosewater marshmallow, squares of butter-thick white chocolate mousse, a quenelle of dark chocolate ganache, sugar-dusted blood orange jelly, I’m like a child in an old-fashioned sweetie shop: I can’t decide what to have, so I’d better try it all.</p>
+             <a href="#" class="btn btn-info"><i class="fa fa-thumbs-o-up"></i></a>
+             <a href="#" class="btn btn btn-danger"><i class="fa fa-heart"></i></a>
+          </div>
+         <div class="col-md-4">
+             <img src="./image/user4.png" alt="user logo" class="img-fluid">
+         </div>
+     </div>
+ </div>
+</section>
+</div>
+<!-- /content 02 -->
+<!-- content 03 -->
+<%= render 'users/form' %>

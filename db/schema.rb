@@ -14,6 +14,7 @@ ActiveRecord::Schema.define(version: 2020_03_11_071621) do
 
   create_table "events", force: :cascade do |t|
     t.string "title"
+    t.string "desc"
     t.text "content"
     t.string "img"
     t.integer "user_id"
@@ -26,6 +27,8 @@ ActiveRecord::Schema.define(version: 2020_03_11_071621) do
     t.string "name", default: "", null: false
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
+    t.string "password", default: "", null: false
+    t.string "password_confirmation", default: "", null: false
     t.string "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"

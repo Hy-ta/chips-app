@@ -1,9 +1,5 @@
 Rails.application.routes.draw do
-  get 'events/index'
-  get 'events/new'
-  get 'events/show'
-  get 'events/edit'
-  get 'events/delete'
+
   root to: "pages#index"
  
   devise_for :users, controllers: {
@@ -13,9 +9,14 @@ Rails.application.routes.draw do
   }
   
   devise_scope :user do
-    get "sign_in", :to => "users/sessions#new"
-    get "sign_out", :to => "users/sessions#destroy" 
+    get "users/show", :to => "users/user_id#show"
+    get "user/id", :to => "users/registration#detail"
+    get "signup", :to => "users/registration#new"
+    get "sign_in", :to => "devise/sessions#new"
+    get "logout", :to => "users/sessions#destroy" 
   end
 
-  resources :users, only: [:show]
+  resources :users do
+    resources :events
+  end
 end
